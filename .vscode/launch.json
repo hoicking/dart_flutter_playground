@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Dart: Current File",
+      "type": "dart",
+      "request": "launch",
+      "program": "${file}"
+    },
+    {
+      "name": "Week 01: Null Safety",
+      "type": "dart",
+      "request": "launch",
+      "program": "bin/week01_dart_basics/01_null_safety.dart"
+    }
+  ]
+}
