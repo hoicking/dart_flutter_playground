@@ -21,7 +21,23 @@ void main() {
   //
   // 建议练习：
   // - 创建一个任务列表 List<Map<String, Object?>>
+  List<Map<String, Object?>> tasks = [
+    {'name': '任务1', 'completed': true, 'priority': 1},
+    {'name': '任务2', 'completed': false, 'priority': 2},
+    {'name': '任务3', 'completed': true, 'priority': 3},
+    {'name': '任务4', 'completed': false, 'priority': 4},
+    {'name': '任务5', 'completed': true, 'priority': 5},
+    {'name': '任务6', 'completed': false, 'priority': 6},
+    {'name': '任务7', 'completed': true, 'priority': 7},
+    {'name': '任务8', 'completed': false, 'priority': 8},
+    {'name': '任务9', 'completed': true, 'priority': 9},
+    {'name': '任务10', 'completed': false, 'priority': 10},
+  ];
+
   // - 过滤已完成任务
+  final completedTasks = tasks.where((per) => per['completed'] == true).toList();
+
+  print(completedTasks);
   // - 用 fold 计算总耗时
 
   print('week01 / 02_types_collections.dart is ready');
