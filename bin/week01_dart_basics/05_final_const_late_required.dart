@@ -11,11 +11,30 @@
 //
 // 深度自检题：
 // 1. final createdAt = DateTime.now() 为什么可以？const createdAt = DateTime.now() 为什么不可以？
+// const编译器需要在运行前知道数据的值 所以不可以 
+
 // 2. const List<int> 和 final List<int> 的区别是什么？final list 还能不能 add？
+
+
 // 3. late String token; 如果读取 token 前没有赋值，会发生什么？这类问题为什么 AI 容易漏？
 // 4. required this.name 和 String? name 的设计意图有什么不同？
+// required 是必填项  String? 是可以传null
+
 // 5. 在 Flutter Widget 构造函数里，哪些字段应该 final？为什么大部分 Widget 字段都应该 final？
+
+
 // 6. 写一个 AppConfig 类，要求 baseUrl 是 const，sessionId 是 final，displayName 是 required。
+class AppConfig {
+  static const String baseUrl = 'https://api.example.com';
+
+  final String? sessionId;
+  final String displayName;
+  
+  AppConfig({
+    this.sessionId,
+    required this.displayName,
+  });
+}
 
 void main() {
   // TODO: 在这里写 final / const / late / required 的对比练习。
@@ -26,5 +45,12 @@ void main() {
   // - 创建一个带 required 参数的类
   // - 尽量不要用 late，除非你能解释为什么安全
 
-  print('week01 / 05_final_const_late_required.dart is ready');
+   final List<int> list = [1, 2, 3];
+   list.add(4);
+   print(list);
+
+  //  const List<int> list2 = [1, 2, 3];
+  //  list2.add(4);
+  //  print(list2);
+
 }
